@@ -1,0 +1,8 @@
+framework module shared_cocoapods {
+    umbrella header "shared_cocoapods.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

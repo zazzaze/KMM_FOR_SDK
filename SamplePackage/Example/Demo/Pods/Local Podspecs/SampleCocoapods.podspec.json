@@ -1,0 +1,22 @@
+{
+  "name": "SampleCocoapods",
+  "version": "0.0.1",
+  "summary": "Pod for use with builded shared kmm lib",
+  "homepage": "https://github.com/zazzaze/KMM_FOR_SDK",
+  "license": "MIT",
+  "authors": {
+    "Egor Anikeev": "egor.anikeev.00@gmail.com"
+  },
+  "swift_versions": "5.2",
+  "platforms": {
+    "ios": "12"
+  },
+  "source": {
+    "git": "https://github.com/zazzaze/KMM_FOR_SDK.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "Sources/**/*.swift",
+  "libraries": "c++",
+  "vendored_frameworks": "Support/shared_cocoapods.xcframework",
+  "swift_version": "5.2"
+}

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SampleCocoapods/SampleCocoapods.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SampleCocoapods/shared_cocoapods.framework/shared_cocoapods
