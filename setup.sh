@@ -10,6 +10,7 @@ function setup_xcframework {
 setup_xcframework KMMSharedCode
 setup_xcframework KMMSharedCodeCocoapods
 setup_xcframework KMMSharedCodeLower
+setup_xcframework KmmSharedMain
 
 echo "Copying cocoapods xcframework"
 cp -r kmm_xcframework/Release/shared_cocoapods.xcframework SamplePackage/Support

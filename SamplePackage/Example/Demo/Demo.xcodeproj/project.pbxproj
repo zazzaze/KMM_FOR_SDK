@@ -16,7 +16,23 @@
 		84028A99291FDF9D0000F7E6 /* SamplePackage in Resources */ = {isa = PBXBuildFile; fileRef = 84028A98291FDF9D0000F7E6 /* SamplePackage */; };
 		84028A9C291FDFA40000F7E6 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 84028A9B291FDFA40000F7E6 /* SamplePackage */; };
 		84028A9D291FF41C0000F7E6 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98597491B373FC6E3426F3 /* Pods_Demo.framework */; };
+		84028AA12920034A0000F7E6 /* shared_main.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84028AA02920034A0000F7E6 /* shared_main.xcframework */; };
+		84028AA22920034A0000F7E6 /* shared_main.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84028AA02920034A0000F7E6 /* shared_main.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84028AA32920034A0000F7E6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84028AA22920034A0000F7E6 /* shared_main.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1EBE97E4025066B916F2CAAA /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -29,6 +45,7 @@
 		84028A90291FDF090000F7E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84028A92291FDF090000F7E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84028A98291FDF9D0000F7E6 /* SamplePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SamplePackage; path = ../..; sourceTree = "<group>"; };
+		84028AA02920034A0000F7E6 /* shared_main.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = shared_main.xcframework; path = ../../../kmm_xcframework/Release/shared_main.xcframework; sourceTree = "<group>"; };
 		9B98597491B373FC6E3426F3 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CD6EEFDFE4D40A46DBFE53 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84028AA12920034A0000F7E6 /* shared_main.xcframework in Frameworks */,
 				84028A9C291FDFA40000F7E6 /* SamplePackage in Frameworks */,
 				84028A9D291FF41C0000F7E6 /* Pods_Demo.framework in Frameworks */,
 			);
@@ -82,6 +100,7 @@
 		84028A9A291FDFA40000F7E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84028AA02920034A0000F7E6 /* shared_main.xcframework */,
 				9B98597491B373FC6E3426F3 /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
@@ -108,6 +127,7 @@
 				84028A7E291FDF050000F7E6 /* Frameworks */,
 				84028A7F291FDF050000F7E6 /* Resources */,
 				2A805543B7CD48748EEFDB74 /* [CP] Embed Pods Frameworks */,
+				84028AA32920034A0000F7E6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
