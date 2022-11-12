@@ -20,9 +20,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SamplePackage",
-            dependencies: []),
+            dependencies: ["shared"]),
         .testTarget(
             name: "SamplePackageTests",
             dependencies: ["SamplePackage"]),
+        .binaryTarget(name: "shared", path: "../kmm_xcframework/Release/shared.xcframework")
     ]
 )
