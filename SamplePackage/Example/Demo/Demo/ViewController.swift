@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SamplePackage
 import SampleCocoapods
 
 class ViewController: UIViewController {
@@ -13,6 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(SamplePackage.SampleClass().text)
+        print(SampleCocoapods.SampleClass().text)
     }
 
 

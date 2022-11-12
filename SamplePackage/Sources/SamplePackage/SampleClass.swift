@@ -4,9 +4,10 @@ import shared
 import shared_cocoapods
 #endif
 
-public struct SamplePackage {
-    public private(set) var text = "Hello, World!"
+public struct SampleClass {
+    public let text: String
 
     public init() {
+        text = Greeting().greeting()
     }
 }
