@@ -60,3 +60,41 @@ android {
         targetSdk = 32
     }
 }
+
+tasks.register("buildReleaseXCFramework", Exec::class.java) {
+    description = "Create a Release XCFramework"
+
+    dependsOn("linkReleaseFrameworkIosArm64")
+    dependsOn("linkReleaseFrameworkIosX64")
+
+    val arm64FrameworkPath = "$rootDir/shared/build/bin/iosArm64/releaseFramework/${libName}.framework"
+    val arm64DebugSymbolsPath =
+        "$rootDir/shared/build/bin/iosArm64/releaseFramework/${libName}.framework.dSYM"
+
+    val x64FrameworkPath = "$rootDir/shared/build/bin/iosX64/releaseFramework/${libName}.framework"
+    val x64DebugSymbolsPath = "$rootDir/shared/build/bin/iosX64/releaseFramework/${libName}.framework.dSYM"
+
+    val xcFrameworkDest = File("$rootDir/../kmm_xcframework/Release/$libName.xcframework")
+    executable = "xcodebuild"
+    args(mutableListOf<String>().apply {
+        add("-create-xcframework")
+        add("-output")
+        add(xcFrameworkDest.path)
+
+        // Real Device
+        add("-framework")
+        add(arm64FrameworkPath)
+        add("-debug-symbols")
+        add(arm64DebugSymbolsPath)
+
+        // Simulator
+        add("-framework")
+        add(x64FrameworkPath)
+        add("-debug-symbols")
+        add(x64DebugSymbolsPath)
+    })
+
+    doFirst {
+        xcFrameworkDest.deleteRecursively()
+    }
+}

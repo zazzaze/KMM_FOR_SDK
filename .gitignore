@@ -1,3 +1,5 @@
+kmm_xcframework
+
 # Gradle files
 .gradle/
 build/
